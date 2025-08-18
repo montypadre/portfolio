@@ -1,0 +1,291 @@
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/poppins-v23-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/poppins-v23-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/poppins-v23-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("fonts/poppins-v23-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+:root {
+  --color-bg: hsl(244, 51%, 11%);
+  --color-text: hsl(0, 0%, 94%);
+  --color-accent: hsl(51, 100%, 50%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3rem;
+  font-size: clamp(3rem, 2.5454545455rem + 1.9393939394vw, 4rem);
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.9090909091rem + 1.4545454545vw, 3rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.1590909091rem + 1.4545454545vw, 2.25rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.wrapper {
+  width: min(100% - 40px, 77.5rem);
+  margin-inline: auto;
+  padding-block: 30px;
+}
+@media (width >= 75em) {
+  .wrapper {
+    padding-block: 60px;
+  }
+}
+
+.section-grid {
+  display: grid;
+  gap: 30px;
+}
+@media (width >= 75em) {
+  .section-grid {
+    gap: 40px;
+  }
+}
+
+.button {
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 60px;
+  padding: 12px 24px;
+  transition: 150ms ease-in-out;
+  transition-property: background, border, color;
+  background: green;
+  color: red;
+}
+.button:hover {
+  background: var(--color-text);
+  border-color: var(--color-text);
+}
+@media (width >= 75em) {
+  .button {
+    font-size: 1rem;
+  }
+}
+.button.secondary {
+  color: var(--color-accent);
+}
+.button.secondary:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.header__wrapper {
+  padding-block: 20px;
+}
+@media (width >= 75em) {
+  .header__wrapper {
+    padding-block: 40px;
+  }
+}
+.header__home {
+  place-items: center;
+  width: 2.875rem;
+  height: 2.875rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-text);
+}
+@media (width >= 75em) {
+  .header__home {
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.75rem;
+  }
+}
+.header__home:hover {
+  color: var(--color-accent);
+}
+
+.hero {
+  display: grid;
+  gap: 30px;
+  align-items: center;
+}
+@media (width >= 43.75em) {
+  .hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width >= 75em) {
+  .hero {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+.hero__wrapper {
+  padding-block-start: 20px;
+}
+@media (width >= 75em) {
+  .hero__wrapper {
+    padding-block-start: 40px;
+  }
+}
+.hero__text p {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.8863636364rem + 0.4848484848vw, 1.25rem);
+}
+.hero__text p:last-child {
+  margin-block-end: 0;
+}
+.hero__image {
+  max-width: 21.8125rem;
+  align-self: center;
+  justify-self: center;
+}
+.hero__image img {
+  border-radius: 230px;
+  width: 100%;
+}
+
+.stack {
+  justify-items: center;
+}
+.stack__icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 36rem;
+}
+@media (width >= 75em) {
+  .stack__icons {
+    gap: 12px;
+  }
+}
+.stack__icon {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+@media (width >= 75em) {
+  .stack__icon {
+    font-size: 1.125rem;
+    padding: 14px 24px;
+  }
+}
+
+.projects {
+  justify-items: center;
+}
+.projects__item {
+  display: grid;
+  gap: 16px;
+}
+@media (width >= 43.75em) {
+  .projects__item {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+  }
+}
+.projects__image {
+  border-radius: 12px;
+  width: 100%;
+}
+.projects__text p {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9431818182rem + 0.2424242424vw, 1.125rem);
+}
+.projects__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.contact {
+  justify-items: center;
+}
+.contact__links {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+.contact__item {
+  list-style-type: none;
+}
+.contact__link {
+  display: grid;
+  grid-template-columns: 1.5rem auto;
+  gap: 20px;
+  align-items: center;
+  color: var(--color-text);
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: color 150ms ease-in-out;
+}
+.contact__link:hover {
+  color: var(--color-accent);
+}
+.contact__link:hover svg > path {
+  fill: var(--color-accent);
+}
+.contact__icon path {
+  transition: fill 150ms ease-in-out;
+}/*# sourceMappingURL=style.css.map */
