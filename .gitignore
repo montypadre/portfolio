@@ -50,4 +50,8 @@ wp-config.php
 #
 # Note: If you wish to whitelist themes,
 # uncomment the next line
+<<<<<<< HEAD
 !/wp-content/themes/portfolio
+=======
+!/wp-content/themes/portfolio
+>>>>>>> b09198a23f33a967c1a2b5eb6f81753084ee27db
